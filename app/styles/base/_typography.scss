@@ -32,3 +32,8 @@ body {
     @include rfs(30);
   }
 }
+
+.subquote {
+  font-style: italic;
+  @include rfs(22);
+}

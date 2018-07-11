@@ -10,7 +10,8 @@
 @import
   'abstracts/variables',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/colors';
 
 // 2. Vendors
 @import
@@ -25,7 +26,9 @@
 
 // 4. Layout-related sections
 @import
-  'layout/header';
+  'layout/header',
+  'layout/homepage-grid',
+  'layout/footer';
 
 // 5. Components
 @import

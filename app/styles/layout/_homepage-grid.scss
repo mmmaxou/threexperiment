@@ -1,0 +1,30 @@
+#homepage-grid {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    grid-gap: 10px 15px;
+
+    .item {
+      background-color: $lightgrey;
+      display: flex;
+      flex-direction: column;      
+      .preview {
+        order: 1;
+        flex-grow: 1;
+        background-image: url(https://picsum.photos/200/300);
+        background-size: cover;
+        
+      }
+      .title {
+        background-color: white;
+        color: $brand-color;
+        text-align: center;
+        order: 2;
+        font-weight: bold;
+      }
+    }
+  }
+}
