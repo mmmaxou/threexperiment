@@ -1,4 +1,7 @@
-section#header
-  .container
-    h1 † Ħ Я ☰ ☰ ___ Ж ___₱ ☰ Я ï ∇∇ ☰ ∩ † $ 
-    div.subquote Here you can see all our experiments
+mixin header(title, subquote)
+  section#header
+    .container
+      if title
+        h1= title 
+      if subquote
+        div.subquote= subquote
