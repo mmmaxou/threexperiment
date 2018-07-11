@@ -1,0 +1,34 @@
+/**
+* Basic typography style for copy text
+*/
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+  @include rfs(24);
+}
+
+
+body {
+
+  h1 {
+    @include rfs(60);
+  }
+  h2 {
+    @include rfs(55);
+  }
+  h3 {
+    @include rfs(50);
+  }
+  h4 {
+    @include rfs(45);
+  }
+  h5 {
+    @include rfs(40);
+  }
+  h6 {
+    @include rfs(35);
+  }
+  p, a {
+    @include rfs(30);
+  }
+}
