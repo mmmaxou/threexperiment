@@ -31,41 +31,37 @@ html.no-js(lang='en-US')
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
         
-  body
-  // ========= HEADER ==========
-  include ../header
-  
-  block content
+  body  
+    // build:js scripts/vendor.js
+    // bower:js
+    script(type="text/javascript", src='/bower_components/jquery/dist/jquery.js')
+    // endbower
+    // endbuild
 
-  // ========= FOOTER ==========
-  include ../footer
-  
-  
-// build:js scripts/vendor.js
-// bower:js
-script(type="text/javascript", src='/bower_components/jquery/dist/jquery.js')
-// endbower
-// endbuild
+    // build:js scripts/plugins.js
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    // endbuild
 
-// build:js scripts/plugins.js
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
-script(type="text/javascript", src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
-// endbuild
-
-// MY OWN LIBS
-script(type="text/javascript", src="static/three/three.min.js")
+    // MY OWN LIBS
+    script(type="text/javascript", src="static/three/three.min.js")
 
 
-// build:js scripts/main.js
-script(type="text/javascript", src='scripts/main.js')
-// endbuild
+    // build:js scripts/main.js
+    script(type="text/javascript", src='scripts/main.js')
+    // endbuild
+    block content
+
+    // ========= FOOTER ==========
+    include ../footer
+
