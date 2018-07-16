@@ -1,0 +1,10 @@
+extends layouts/default
+
+block content
+  include header
+  +header("Physics experiment", "Explosions are coming soon ... Now just click on the canvas and press SPACE")
+
+  #canvas.pointer
+
+  // Scripts
+  script(type="text/javascript", src="scripts/physics.js")
