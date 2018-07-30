@@ -1,0 +1,12 @@
+extends layouts/default
+
+block content
+  // ========= HEADER ==========
+  include ./header
+  +header("Just a lil' game.", "Have some fun.")
+
+  #canvas.pointer
+
+
+  // Scripts
+  script(type="text/javascript", src="scripts/little-game.js")
